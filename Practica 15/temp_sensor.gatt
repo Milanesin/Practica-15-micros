@@ -1,14 +1,8 @@
-# temp_sensor.gatt - GATT configuration for Pico W BLE Temperature Sensor
-
-# Generic Access Profile Service
 PRIMARY_SERVICE, GAP_SERVICE
-CHARACTERISTIC, GAP_DEVICE_NAME, READ, "picov_temp"
+CHARACTERISTIC, GAP_DEVICE_NAME, READ, "picow_temp"
 
-# Generic Attribute Profile Service
 PRIMARY_SERVICE, GATT_SERVICE
-CHARACTERISTIC, GATT_DATABASE_HASH, READ
+CHARACTERISTIC, GATT_DATABASE_HASH, READ,
 
-# Environmental Sensing Service (Standard BLE Service for Temperature)
-PRIMARY_SERVICE, org.bluetooth.service.environmental_sensing
-CHARACTERISTIC, org.bluetooth.characteristic.temperature, 
-    READ | NOTIFY | INDICATE | DYNAMIC
+PRIMARY_SERVICE, ORG_BLUETOOTH_SERVICE_ENVIRONMENTAL_SENSING
+CHARACTERISTIC, ORG_BLUETOOTH_CHARACTERISTIC_TEMPERATURE, READ | NOTIFY | INDICATE | DYNAMIC,
